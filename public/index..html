@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Invoicing & Payment System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-GLhlTQ8iN17U2U67BfuB5ayjBoyUKPHGzFv9bBhqNv1zq2uuP+JXW5Nc1BdaKcP" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Blockchain Invoicing & Payment System</h1>
+        </header>
+
+        <!-- Invoice Form -->
+        <form id="invoiceForm">
+            <div class="form-group">
+                <label for="clientName">Client Name:</label>
+                <input type="text" id="clientName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="amount">Invoice Amount (USD):</label>
+                <input type="number" id="amount" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cryptoPayment">Cryptocurrency Payment:</label>
+                <select id="cryptoPayment">
+                    <option value="bitcoin">Bitcoin</option>
+                    <option value="ethereum">Ethereum</option>
+                    <!-- Add other cryptocurrency options as needed -->
+                </select>
+            </div>
+
+            <button type="button" onclick="generateInvoice()">Generate Invoice</button>
+        </form>
+
+        <!-- Display Invoice -->
+        <div id="invoiceDisplay" class="hidden">
+            <h2>Invoice Details</h2>
+            <p><strong>Client Name:</strong> <span id="displayClientName"></span></p>
+            <p><strong>Invoice Amount (USD):</strong> $<span id="displayAmount"></span></p>
+            <p><strong>Cryptocurrency Payment:</strong> <span id="displayCryptoPayment"></span></p>
+            <p><strong>Payment Status:</strong> <span id="paymentStatus">Pending</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
